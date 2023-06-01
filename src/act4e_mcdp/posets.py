@@ -59,11 +59,11 @@ class Numbers(Poset):
 class FinitePoset(Poset):
     """
     Represents a finite poset of elements
+    ('a', 'b')  in relations represents 'a' $\leq$ 'b'
 
     Attributes:
         elements: A set of strings
         relations: A set of pairs of strings that represent the relations between the elements
-        ('a', 'b') represents 'a' $\leq$ 'b'
 
 
     Examples:
