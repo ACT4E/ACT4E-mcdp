@@ -63,6 +63,7 @@ class FinitePoset(Poset):
     Attributes:
         elements: A set of strings
         relations: A set of pairs of strings that represent the relations between the elements
+        ('a', 'b') represents 'a' $\leq$ 'b'
 
 
     Examples:
