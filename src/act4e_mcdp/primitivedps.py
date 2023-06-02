@@ -227,9 +227,9 @@ class M_Res_AddMany_DP(PrimitiveDP):
 
 
 @dataclass
-class MeetNDualDP(PrimitiveDP):
+class JoinNDP(PrimitiveDP):
     r"""
-    This DP is used as plumbing. It is the dual of [JoinNDP][act4e_mcdp.primitivedps.JoinNDP].
+    This DP is used as plumbing. It is the dual of [MeetNDualDP][act4e_mcdp.primitivedps.MeetNDualDP].
 
 
     The functionality posets is a PosetProduct of, in general, $n$ elements $\F_1, \F_2, \dots$.
@@ -255,9 +255,9 @@ class MeetNDualDP(PrimitiveDP):
 
 
 @dataclass
-class JoinNDP(PrimitiveDP):
+class MeetNDualDP(PrimitiveDP):
     r"""
-    This DP is used as plumbing. It is the dual of [MeetNDualDP][act4e_mcdp.primitivedps.MeetNDualDP].
+    This DP is used as plumbing. It is the dual of [JoinNDP][act4e_mcdp.primitivedps.JoinNDP].
 
     The resources posets is a PosetProduct of, in general, $n$ elements $\R_1, \R_2, \dots$.
 
