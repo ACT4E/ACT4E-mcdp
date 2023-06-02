@@ -81,7 +81,8 @@ class PosetProduct(Poset):
     """
     Represents the product of 0 or more posets.
     Its elements are tuples of elements of the posets.
-
+    Here we slightly deviate from the strict monoidal structure,
+    and work with Poset with Cartesian Product
     """
 
     subs: list[Poset]
