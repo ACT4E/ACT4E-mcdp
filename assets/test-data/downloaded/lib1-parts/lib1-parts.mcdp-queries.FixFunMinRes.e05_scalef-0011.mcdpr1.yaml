@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib1-parts/lib1-parts.models.e05_scalef.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value:
+  f: Infinity
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: Infinity
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: Infinity

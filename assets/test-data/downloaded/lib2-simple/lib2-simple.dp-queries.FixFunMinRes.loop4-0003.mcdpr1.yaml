@@ -1,0 +1,17 @@
+dp: lib2-simple.primitivedps.loop4.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value: '11.85000000'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '1.37370713'
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '1.37370713'

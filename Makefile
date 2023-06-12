@@ -2,7 +2,7 @@ all:
 
 .PHONY: build
 
-build:
+build: pack
 	rm -rf dist/*
 	poetry build -f wheel
 
@@ -33,8 +33,10 @@ docs-serve:
 TD=assets/test-data/downloaded
 
 pack:  
-	zuper-cli pack -d $(TD) --include '*yaml' -o src/act4e_mcdp/autogen_packed_test_data.py
+	zuper-cli pack -d $(TD) --include '**/*yaml' -o src/act4e_mcdp/autogen_packed_test_data.py
 
 get-data:
-	rm -f $(TD)/*
-	zuper-ide-imp-create-test-cases --github-username AndreaCensi --source https://github.com/co-design-models/ACT4E-exercises-spring2023  -o $(TD)
+	-rm -rf $(TD)/*
+	zuper-ide-imp-create-test-cases \
+		--only-single-output \
+		--github-username AndreaCensi --source https://github.com/co-design-models/ACT4E-exercises-spring2023  -o $(TD)

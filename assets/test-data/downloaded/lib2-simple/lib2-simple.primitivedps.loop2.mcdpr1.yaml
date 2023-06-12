@@ -1,0 +1,19 @@
+$schema:
+  title: IdentityDP
+  kind: PrimitiveDP
+  description: f ≤ r
+F:
+  $schema:
+    kind: Poset
+    title: Numbers
+  bottom: '0'
+  top: Infinity
+  units: ''
+R:
+  $schema:
+    kind: Poset
+    title: Numbers
+  bottom: '0'
+  top: Infinity
+  units: ''
+ann:

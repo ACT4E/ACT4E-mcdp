@@ -1,0 +1,19 @@
+mcdp: assets/test-data/downloaded/lib1-parts/lib1-parts.models.e04_splitter2.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value:
+  f_1: '0.24000000'
+  f_2: '0'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: '0.24000000'
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: '0.24000000'

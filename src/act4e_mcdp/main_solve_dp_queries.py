@@ -50,8 +50,8 @@ def solve_dp_queries_main() -> None:
         "succeeded": [],
         "comparison_not_implemented": [],
     }
-
-    for fn in glob.glob(queries_dir + "/**/*.dp-queries.*.mcdpr1.yaml", recursive=True):
+    filenames = list(glob.glob(queries_dir + "/**/*.dp-queries.*.mcdpr1.yaml", recursive=True))
+    for fn in sorted(filenames):
         data = yaml.load(open(fn).read(), Loader=yaml.SafeLoader)
         filename_rel = cast(str, data["dp"])
         filename = os.path.join(os.path.dirname(fn), filename_rel)

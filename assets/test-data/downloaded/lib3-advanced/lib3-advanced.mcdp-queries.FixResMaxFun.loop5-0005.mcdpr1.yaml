@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib3-advanced/lib3-advanced.models.loop5.mcdpr1.yaml
+query: FixResMaxFun
+approximated: false
+value:
+  r: '5.92000000'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '5.92000000'
+  optimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '5.92000000'

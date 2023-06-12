@@ -1,0 +1,20 @@
+dp: lib2-simple.primitivedps.drone1.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value:
+- '4.35000000'
+- '5.91000000'
+- '18.51000000'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '0.00006098'
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '0.00006098'

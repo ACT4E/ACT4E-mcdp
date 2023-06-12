@@ -1,0 +1,338 @@
+$schema:
+  title: CompositeNamedDP
+  kind: NamedDP
+functionalities:
+  f:
+    $schema:
+      kind: Poset
+      title: Numbers
+    bottom: '0'
+    top: Infinity
+    units: ''
+resources:
+  r:
+    $schema:
+      kind: Poset
+      title: Numbers
+    bottom: '0'
+    top: Infinity
+    units: ''
+nodes:
+  a:
+    $schema:
+      title: CompositeNamedDP
+      kind: NamedDP
+    functionalities:
+      f:
+        $schema:
+          kind: Poset
+          title: Numbers
+        bottom: '0'
+        top: Infinity
+        units: ''
+      f2:
+        $schema:
+          kind: Poset
+          title: Numbers
+        bottom: '0'
+        top: Infinity
+        units: ''
+    resources:
+      r:
+        $schema:
+          kind: Poset
+          title: Numbers
+        bottom: '0'
+        top: Infinity
+        units: ''
+      r2:
+        $schema:
+          kind: Poset
+          title: Numbers
+        bottom: '0'
+        top: Infinity
+        units: ''
+    nodes:
+      _prod1:
+        $schema:
+          title: SimpleWrap
+          kind: NamedDP
+        functionalities:
+          _factor0:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        resources:
+          _result:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        dp:
+          $schema:
+            title: M_Power_DP
+            kind: PrimitiveDP
+            description: f² ≤ r
+          F:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          R:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          num: 2
+          den: 1
+          ann:
+      _sum1:
+        $schema:
+          title: SimpleWrap
+          kind: NamedDP
+        functionalities:
+          _term0:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          _term1:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        resources:
+          _result2:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        dp:
+          $schema:
+            title: M_Res_AddMany_DP
+            kind: PrimitiveDP
+            description: f₁ + f₂ ≤ r
+          opspace:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: -Infinity
+            top: Infinity
+            units: ''
+          R:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          ann:
+          F:
+            $schema:
+              kind: Poset
+              title: PosetProduct
+            subs:
+            - $schema:
+                kind: Poset
+                title: Numbers
+              bottom: '0'
+              top: Infinity
+              units: ''
+            - $schema:
+                kind: Poset
+                title: Numbers
+              bottom: '0'
+              top: Infinity
+              units: ''
+      _mult1:
+        $schema:
+          title: SimpleWrap
+          kind: NamedDP
+        functionalities:
+          _op0:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        resources:
+          _res:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        dp:
+          $schema:
+            title: M_Res_MultiplyConstant_DP
+            kind: PrimitiveDP
+            description: f ⋅ 0.1 ≤ r
+          F:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          vu:
+            $schema:
+              title: ValueFromPoset
+            value: '0.1'
+            poset:
+              $schema:
+                kind: Poset
+                title: Numbers
+              bottom: '0.1'
+              top: '0.1'
+              units: ''
+          opspace:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: -Infinity
+            top: Infinity
+          R:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          ann:
+      _join_fname1:
+        $schema:
+          title: SimpleWrap
+          kind: NamedDP
+        functionalities:
+          _a:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        resources:
+          _f2_0:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          _f2_1:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+        dp:
+          $schema:
+            title: MeetNDualDP
+            kind: PrimitiveDP
+            description: f ≤  r₁ ∨ r₂
+          F:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          C:
+            $schema:
+              kind: Poset
+              title: Numbers
+            bottom: '0'
+            top: Infinity
+            units: ''
+          ann:
+          R:
+            $schema:
+              kind: Poset
+              title: PosetProduct
+            subs:
+            - $schema:
+                kind: Poset
+                title: Numbers
+              bottom: '0'
+              top: Infinity
+              units: ''
+            - $schema:
+                kind: Poset
+                title: Numbers
+              bottom: '0'
+              top: Infinity
+              units: ''
+    connections:
+    - from:
+        node: _prod1
+        node_resource: _result
+      to:
+        node: _sum1
+        node_functionality: _term0
+    - from:
+        functionality: f
+      to:
+        node: _sum1
+        node_functionality: _term1
+    - from:
+        node: _sum1
+        node_resource: _result2
+      to:
+        node: _mult1
+        node_functionality: _op0
+    - from:
+        node: _mult1
+        node_resource: _res
+      to:
+        resource: r2
+    - from:
+        node: _join_fname1
+        node_resource: _f2_0
+      to:
+        resource: r
+    - from:
+        node: _join_fname1
+        node_resource: _f2_1
+      to:
+        node: _prod1
+        node_functionality: _factor0
+    - from:
+        functionality: f2
+      to:
+        node: _join_fname1
+        node_functionality: _a
+connections:
+- from:
+    node: a
+    node_resource: r2
+  to:
+    node: a
+    node_functionality: f2
+- from:
+    node: a
+    node_resource: r
+  to:
+    resource: r
+- from:
+    functionality: f
+  to:
+    node: a
+    node_functionality: f

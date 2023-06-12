@@ -1,4 +1,4 @@
-exclude: .pre-commit-config.yaml|(.*autogen.*py)|(.*mcdpr1\.yaml)
+exclude: .pre-commit-config.yaml|(.*autogen.*py)|(.*mcdpr1.*)
 files: (^src/.*py)|(.*yaml)
 repos:
 - hooks:

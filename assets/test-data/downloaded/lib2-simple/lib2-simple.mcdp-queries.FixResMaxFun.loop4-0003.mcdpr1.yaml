@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib2-simple/lib2-simple.models.loop4.mcdpr1.yaml
+query: FixResMaxFun
+approximated: true
+value:
+  r: '1'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '8.75'
+  optimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '10'

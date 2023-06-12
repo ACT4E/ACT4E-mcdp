@@ -1,0 +1,17 @@
+dp: lib2-simple.primitivedps.concatenation1.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value: '1'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '0'
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - '0'

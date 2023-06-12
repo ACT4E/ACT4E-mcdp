@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib2-simple/lib2-simple.models.concatenation1.mcdpr1.yaml
+query: FixResMaxFun
+approximated: false
+value:
+  r_1: Infinity
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - Infinity
+  optimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - Infinity

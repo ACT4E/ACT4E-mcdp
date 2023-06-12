@@ -31,9 +31,11 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.scripts]
 act4e-mcdp-solve-dp = 'act4e_mcdp:solve_dp_main'
-act4e-mcdp-solve-mcdp = 'act4e_mcdp:solve_mcdp_main'
-act4e-mcdp-download-tests = 'act4e_mcdp:download_main'
 act4e-mcdp-solve-dp-queries = 'act4e_mcdp:solve_dp_queries_main'
+act4e-mcdp-solve-mcdp = 'act4e_mcdp:solve_mcdp_main'
+act4e-mcdp-solve-mcdp-queries = 'act4e_mcdp:solve_mcdp_queries_main'
+act4e-mcdp-download-tests = 'act4e_mcdp:download_main'
+
 #[tool.poetry_bumpversion.file."src/act4e_mcdp/__init__.py"]
 # Duplicate the line above to add more files
 [tool.poetry-dynamic-versioning]

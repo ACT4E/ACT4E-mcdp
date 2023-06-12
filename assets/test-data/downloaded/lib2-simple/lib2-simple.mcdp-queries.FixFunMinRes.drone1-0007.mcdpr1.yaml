@@ -1,0 +1,20 @@
+mcdp: assets/test-data/downloaded/lib2-simple/lib2-simple.models.drone1.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value:
+  endurance: '4.35000000'
+  extra_payload: Infinity
+  extra_power: Infinity
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - mass: Infinity
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - mass: Infinity

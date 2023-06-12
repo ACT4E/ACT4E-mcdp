@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib1-parts/lib1-parts.models.e07_ceil.mcdpr1.yaml
+query: FixFunMinRes
+approximated: false
+value:
+  f: '0.25000000'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: '1'
+  optimistic:
+    $schema:
+      title: UpperSet
+    minimals:
+    - r: '1'

@@ -1,0 +1,18 @@
+mcdp: assets/test-data/downloaded/lib1-parts/lib1-parts.models.e06_addr.mcdpr1.yaml
+query: FixResMaxFun
+approximated: false
+value:
+  r: '4.95000000'
+result:
+  $schema:
+    title: Interval
+  pessimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '14.9500000'
+  optimistic:
+    $schema:
+      title: LowerSet
+    maximals:
+    - '14.9500000'

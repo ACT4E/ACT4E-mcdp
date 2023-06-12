@@ -18,10 +18,11 @@ def download_main() -> None:
 
     from .autogen_packed_test_data import resources
 
-    os.makedirs(output, exist_ok=True)
-
     for name, data in resources.items():
         fn = os.path.join(output, name)
+        dn = os.path.dirname(fn)
+        os.makedirs(dn, exist_ok=True)
         logger.info("Writing %r", fn)
+
         with open(fn, "w") as f:
             f.write(data)
