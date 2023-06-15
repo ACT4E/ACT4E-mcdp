@@ -58,7 +58,7 @@ class Numbers(Poset):
 @dataclass
 class FinitePoset(Poset):
     """
-    Represents a finite poset of elements
+    Represents a finite poset of elements.
     ('a', 'b')  in relations represents 'a' $\leq$ 'b'
 
     Attributes:
