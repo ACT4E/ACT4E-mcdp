@@ -58,7 +58,8 @@ class Numbers(Poset):
 @dataclass
 class FinitePoset(Poset):
     """
-    Represents a finite poset of elements
+    Represents a finite poset of elements.
+    ('a', 'b')  in relations represents 'a' $\leq$ 'b'
 
     Attributes:
         elements: A set of strings
@@ -80,7 +81,8 @@ class PosetProduct(Poset):
     """
     Represents the product of 0 or more posets.
     Its elements are tuples of elements of the posets.
-
+    Here we slightly deviate from the strict monoidal structure,
+    and work with Poset with Cartesian Product
     """
 
     subs: list[Poset]
