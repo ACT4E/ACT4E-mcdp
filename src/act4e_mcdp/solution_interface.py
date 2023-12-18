@@ -5,7 +5,7 @@ from decimal import Decimal
 from fractions import Fraction
 from typing import Generic, Optional, TypeVar, final, overload
 
-from mcdp_maps_reg import cco_map_value
+# from mcdp_maps_reg import cco_map_value
 from .posets import Interval, LowerSet, Numbers, PosetProduct, UpperSet
 from .primitivedps import (
     AmbientConversion,
@@ -808,23 +808,23 @@ class DPSolverInterface(ABC):
 
     # Mux
 
-    def solve_dp_FixFunMinRes_Mux(
-        self, dp: Mux, query: FixFunMinResQuery[object]
-    ) -> Interval[UpperSet[object]]:
-        cco = cco_map_value  # FIXME
+    # def solve_dp_FixFunMinRes_Mux(
+    #     self, dp: Mux, query: FixFunMinResQuery[object]
+    # ) -> Interval[UpperSet[object]]:
+    #     cco = cco_map_value  # FIXME
 
-        r = dp.coords.get_it(query.functionality, cco=cco)  # type: ignore
-        return Interval.degenerate(UpperSet.principal(r))
+    #     r = dp.coords.get_it(query.functionality, cco=cco)  # type: ignore
+    #     return Interval.degenerate(UpperSet.principal(r))
 
-        raise NotImplementedError
+    #     raise NotImplementedError
 
-    def solve_dp_FixResMaxFun_Mux(
-        self, dp: Mux, query: FixResMaxFunQuery[object]
-    ) -> Interval[LowerSet[object]]:
-        cco = cco_map_value  # FIXME
+    # def solve_dp_FixResMaxFun_Mux(
+    #     self, dp: Mux, query: FixResMaxFunQuery[object]
+    # ) -> Interval[LowerSet[object]]:
+    #     cco = cco_map_value  # FIXME
 
-        r = dp.coords2.get_it(query.resources, cco=cco)  # type: ignore
-        return Interval.degenerate(LowerSet.principal(r))
+    #     r = dp.coords2.get_it(query.resources, cco=cco)  # type: ignore
+    #     return Interval.degenerate(LowerSet.principal(r))
 
     def solve_dp_FixFunMinRes_M_Fun_MultiplyMany_DP(
         self, dp: M_Fun_MultiplyMany_DP, query: FixFunMinResQuery[Decimal]

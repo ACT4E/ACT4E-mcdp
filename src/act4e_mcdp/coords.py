@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any, Generic, Literal, Optional, Sequence, TypeVar, final
 
-from mcdp_utils_misc import BoolLike, not_true
+# from mcdp_utils_misc import BoolLike, not_true
 
 __all__ = [
     "ComposeList",
@@ -524,14 +524,16 @@ class InvalidCoords(ValueError):
     pass
 
 
-def is_valid_coords(c: "Coords") -> BoolLike:
+# def is_valid_coords(c: "Coords") -> BoolLike:
+def is_valid_coords(c: "Coords") -> bool:
     if isinstance(c, (CoordsIdentity, CoordsConst)):
         return True
     if isinstance(c, CoordsComp):
         return is_valid_coords(c.rest)
     if isinstance(c, ComposeList):  # type: ignore
         return all(is_valid_coords(x) for x in c.components)
-    return not_true(f"Invalid coords type {type(c).__name__}")
+    # return not_true(f"Invalid coords type {type(c).__name__}")
+    return False
 
 
 class CCOMapValue(CoordsConcreteOp[object]):
